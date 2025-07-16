@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Portfolio – Nicolò Boschini</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/favicon.ico" />
+
+    <!-- Bootstrap 5 (solo CSS) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- CSS compilato da Sass -->
+    <link rel="stylesheet" href="dist/style.css" />
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#mainNav" data-bs-offset="70">
+    <!-- Navbar sticky (top su mobile & desktop) -->
+    <nav id="mainNav" class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#home">NB</a>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">Chi sono</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skill</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Progetti</a></li>
+                    <li class="nav-item"><a class="nav-link" href="cv.html">CV</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contattami</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header id="home" class="d-flex align-items-center justify-content-center bg-hero text-center text-white">
+        <div>
+            <h1 class="display-4 fw-bold">Nicolò Boschini </h1>
+            <p class="lead">Blockchain Dev • Problem Solver</p>
+            <a href="cv.html" class="btn btn-primary btn-lg mt-3">Guarda il mio CV</a>
+        </div>
+    </header>
+
+    <!-- ABOUT  (Flexbox semplicissimo) -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Chi sono</h2>
+            <div class="d-flex flex-column flex-lg-row align-items-center gap-4">
+                <img src="foto-cv.jpg" class="border-radius: 0" alt="avatar" width="200" />
+                <p class="fs-5">
+                    Sono uno studente appassionato di innovazione digitale e tecnologie emergenti, con un focus
+                    particolare sul mondo della blockchain. Attualmente sto approfondendo questo ambito attraverso un
+                    percorso di studi specifico e progetti pratici, affiancando lo studio al mio impiego nel settore
+                    militare.
+                    Mi piace lavorare in modo concreto e orientato ai risultati, unendo curiosità, spirito critico e
+                    attenzione ai dettagli.
+                    Nel tempo libero mi dedico allo sport, in particolare alla corsa su lunga distanza e al triathlon,
+                    attività che mi aiutano a coltivare disciplina, determinazione e resilienza, qualità che ritengo
+                    fondamentali anche in ambito professionale.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SKILL (Bootstrap Grid + Badge) -->
+    <section id="skills" class="section-padding">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Skill principali</h2>
+            <div class="row row-cols-2 row-cols-md-4 g-3">
+                <div class="col"><span class="badge bg-primary w-100 py-3">Blockchain</span></div>
+                <div class="col"><span class="badge bg-secondary w-100 py-3">Ethereum</span></div>
+                <div class="col"><span class="badge bg-success w-100 py-3">HTML & CSS</span></div>
+                <div class="col"><span class="badge bg-warning text-dark w-100 py-3">...</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS  (Grid responsive) -->
+    <section id="projects" class="section-padding bg-light">
+        <div class="container">
+            <h2 class="fw-bold mb-4">Progetti recenti</h2>
+            <div class="row g-4">
+                <article class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Non sono presenti progetti.</h3>
+                            <p class="card-text flex-grow-1">...
+                            </p>
+                            <a href="#" class="btn btn-outline-primary mt-2">GitHub Repo</a>
+                        </div>
+                    </div>
+                </article>
+                <article class="col-md-6">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body d-flex flex-column">
+                            <h3 class="h5 card-title">Non sono presenti progetti.</h3>
+                            <p class="card-text flex-grow-1">...</p>
+                            <a href="#" class="btn btn-outline-primary mt-2">GitHub Repo</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-3 bg-dark text-white text-center">
+        <small>&copy; <span id="year"></span> • Nicolò Boschini</small>
+    </footer>
+
+    <!-- Bootstrap JS (opzionale ma utile per navbar collapse) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+/* ===== Variabili tema (Bootstrap-like) ===== */
+$primary : #11b57c;
+$accent : #ff5c39;
+$dark : #111;
+$light : #f5f5f5;
+
+/* ===== Reset rapido extra ===== */
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+.section-padding {
+    padding: 4rem 0;
+}
+
+/* ===== Hero con Flexbox + overlay ===== */
+.bg-hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(120deg, rgba($primary, .85), rgba($accent, .8)),
+        url("https://source.unsplash.com/1600x900/?road,run") center/cover;
+}
+
+/* Dark-mode automatico */
+@media (prefers-color-scheme: dark) {
+    body {
+        background: $dark;
+        color: $light;
+    }
+
+    .bg-light {
+        background: $dark !important;
+    }
+}
+
+/* Nel dist/style.css troverai la versione compilata.
+   Usa:  sass scss/style.scss dist/style.css --no-source-map --style=compressed */
