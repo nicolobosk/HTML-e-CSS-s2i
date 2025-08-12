@@ -1,0 +1,16 @@
+# macOS system files
+.DS_Store
+assets/.DS_Store
+assets/img/.DS_Store
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Sass cache
+.sass-cache/
+
+# IDE files
+.vscode/
+.idea/
